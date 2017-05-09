@@ -1,0 +1,23 @@
+{
+  "name": "scaphold-ui",
+  "version": "0.0.4",
+  "title": "Scaphold UI",
+  "description": "Semantic empowers designers and developers by creating a shared vocabulary for UI.",
+  "homepage": "http://www.semantic-ui.com",
+  "author": "Michael Paris",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Semantic-Org/Semantic-UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
+  },
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "style": "dist/semantic.min.css"
+}
