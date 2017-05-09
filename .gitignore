@@ -35,3 +35,6 @@ nbproject
 *.sublime-workspace
 .build*
 package.npm.json
+package.json
+package.json.tmp
+.gitignore

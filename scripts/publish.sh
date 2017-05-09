@@ -3,9 +3,8 @@ set -e
 
 echo 'Temporarily ignoring package.json'
 
-echo 'package.json' >> .gitignore
-echo 'package.json.tmp' >> .gitignore
-echo '.gitignore' >> .gitignore
+echo 'Stashing git'
+git stash
 
 echo 'Patching full package.json'
 npm version patch
@@ -14,11 +13,18 @@ mv package.json package.json.tmp
 echo 'Swapping package.json'
 mv package.npm.json package.json
 
+echo 'Stashing git'
+git stash
+
 echo 'Patching swapped package.json'
 npm version patch
 
 echo 'Publishing to NPM'
 npm publish
+
+echo 'Unstashing git'
+git stash drop
+git stash drop
 
 echo 'Swapping back package.json'
 mv package.json package.npm.json
