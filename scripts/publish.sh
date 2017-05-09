@@ -2,14 +2,14 @@
 set -e
 
 echo 'Patching full package.json'
-npm version patch
+npm version --no-git-tag-version patch
 mv package.json package.json.tmp
 
 echo 'Swapping package.json'
 mv package.npm.json package.json
 
 echo 'Patching swapped package.json'
-npm version patch
+npm version --no-git-tag-version patch
 
 echo 'Publishing to NPM'
 npm publish
